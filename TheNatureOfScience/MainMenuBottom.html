@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Nature Science</title>
+    <link rel="stylesheet" href="MainMenuBottomPart.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-panel">
+        <h1 class="left-text">THE</h1>
+      </div>
+      <div class="right-panel">
+        <h1><span class="highlight">NATURE SCIENCE</span></h1>
+        <p>Awareness/Introduction</p>
+
+        <div class="definition-section">
+          <h2>The Nature of Science</h2>
+          <p>
+            The Nature of Science (NOS) refers to the foundational principles
+            and ideas that underlie the practice and application of scientific
+            knowledge. Understanding NOS is essential for scientific literacy,
+            enabling individuals to grasp how scientific knowledge is developed,
+            validated, and applied. This comprehension empowers people to make
+            informed decisions on personal and societal issues that are
+            scientifically based.
+          </p>
+        </div>
+        <div class="subtopics-section" style="text-align: center">
+          <h2>SUBTOPICS</h2>
+          <div class="subtopic-buttons" style="text-align: right">
+            <button
+              class="subtopic-button"
+              data-tooltip="Learn about how the universe operates according to consistent principles."
+              onclick="showModal('Scientific Worldview', 'Learn about how the universe operates according to consistent principles.')"
+            >
+              Scientific Worldview <span>&gt;</span>
+            </button>
+            <button
+              class="subtopic-button"
+              data-tooltip="Explore the diverse methods scientists use to investigate phenomena."
+              onclick="showModal('Scientific Inquiry', 'Explore the diverse methods scientists use to investigate phenomena.')"
+            >
+              Scientific Inquiry <span>&gt;</span>
+            </button>
+            <button
+              class="subtopic-button"
+              data-tooltip="Understand the difference between scientific theories and laws."
+              onclick="showModal('Scientific Theories and Laws', 'Understand the difference between scientific theories and laws.')"
+            >
+              Scientific Theories and Laws <span>&gt;</span>
+            </button>
+            <button
+              class="subtopic-button"
+              data-tooltip="Discover the role of creativity in scientific processes."
+              onclick="showModal('The Role of Creativity', 'Discover the role of creativity in scientific processes.')"
+            >
+              The Role of Creativity <span>&gt;</span>
+            </button>
+            <button
+              class="subtopic-button"
+              data-tooltip="Learn why scientific knowledge is subject to change with new evidence."
+              onclick="showModal('Tentativeness of Scientific Knowledge', 'Learn why scientific knowledge is subject to change with new evidence.')"
+            >
+              Tentativeness of Scientific Knowledge <span>&gt;</span>
+            </button>
+          </div>
+        </div>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+          </div>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="ImagePlaceholder.png" alt="Virus Image" />
+      </div>
+    </div>
+  </body>
+</html>

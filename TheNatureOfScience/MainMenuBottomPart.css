@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: auto; /* Increase height to 120% of the viewport */
+}
+
+.left-panel {
+  background-color: #4a6b4f;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align text horizontally to the right */
+  align-items: flex-start; /* Align text vertically to the top */
+  position: relative;
+  padding-right: 10px; /* Adjust to align with the right panel content */
+}
+
+.left-text {
+  color: #f9e7b8; /* Matches the color of the right panel */
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  transform: translateY(16%); /* Fine-tune vertical alignment */
+}
+
+.right-panel {
+  background-color: #f9e7b8;
+  flex: 4;
+  padding: 10px 5px; /* Reduced padding to move content closer to the edges */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; /* Align content to the left */
+}
+
+.right-panel h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #4a6b4f;
+}
+
+.right-panel .highlight {
+  font-weight: bold;
+}
+
+.right-panel p {
+  margin: 10px 0 0 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4a6b4f;
+}
+
+.image-container {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #4a6b4f; /* Green background around the image */
+  padding: 10px; /* Space for the green border effect */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Ensures the image stays circular */
+}
+
+.definition-section {
+  background-color: #f9e7b8; /* Light background for contrast */
+  padding: 20px 40px 20px 155px; /* Simplified padding */
+  font-family: Arial, sans-serif;
+  color: #4a6b4f; /* Match the text color of the right panel */
+  line-height: 1.6;
+  border-radius: 10px; /* Rounded corners for a clean look */
+}
+
+.definition-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.definition-section p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.definition-content {
+  margin-top: 20px; /* Add spacing from the "Awareness/Introduction" text */
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.definition-content h2 {
+  font-size: 2rem;
+  color: #4a6b4f; /* Matches the left panel color */
+  margin-bottom: 10px;
+}
+
+.definition-content h3 {
+  font-size: 1.5rem;
+  color: #4a6b4f;
+  margin-bottom: 15px;
+}
+
+.definition-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.definition-content ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.definition-content ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.subtopics-section {
+  background-color: #f9e7b8; /* Match the right panel background */
+  padding: 30px 50px; /* Increased padding for better spacing */
+  margin-top: 30px; /* Add more space above the section */
+  border-radius: 10px; /* Rounded corners for a clean look */
+  display: flex;
+  justify-content: space-between; /* Space between heading and buttons */
+  align-items: center; /* Center align heading and buttons vertically */
+}
+
+.subtopics-section h2 {
+  font-size: 3rem; /* Increased font size for the header */
+  color: #4a6b4f; /* Match the left panel color */
+  font-weight: bolder;
+  margin: 0;
+  flex: 1; /* Allow the heading to take up space on the left */
+  text-align: center; /* Center the heading */
+  padding: 0px 90px 10px 0px; /* Adjust padding for better alignment */
+}
+
+.subtopic-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased space between buttons */
+  align-items: flex-end; /* Align buttons to the right */
+}
+
+.subtopic-button {
+  position: relative; /* Required for tooltip positioning */
+  background-color: #4a6b4f; /* Green background for buttons */
+  color: #f9e7b8; /* Match the right panel text color */
+  font-size: 1.8rem; /* Increased font size for buttons */
+  font-weight: bold;
+  padding: 25px 30px; /* Increased padding for larger buttons */
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform for animation */
+  width: 500px; /* Increased button width */
+}
+
+.subtopic-button:hover {
+  background-color: #3b5940; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.subtopic-button span {
+  font-size: 2rem; /* Increased font size for the arrow */
+  font-weight: bold;
+}
+
+.subtopic-button::after {
+  content: attr(
+    data-tooltip
+  ); /* Use the data-tooltip attribute for the tooltip text */
+  position: absolute;
+  top: -40px; /* Position above the button */
+  right: 0;
+  background-color: #333; /* Dark background for the tooltip */
+  color: #fff; /* White text for contrast */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  white-space: nowrap; /* Prevent text wrapping */
+  opacity: 0; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the tooltip */
+  transition: opacity 0.3s ease, transform 0.2s ease; /* Add transform for animation */
+  transform: translateY(10px); /* Start slightly below */
+}
+
+.subtopic-button:hover::after {
+  opacity: 1; /* Show the tooltip on hover */
+  transform: translateY(0); /* Move into position */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease; /* Add fade-in animation */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
