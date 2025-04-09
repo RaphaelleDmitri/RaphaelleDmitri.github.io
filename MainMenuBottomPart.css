@@ -1,0 +1,51 @@
+.subtopic-button {
+  position: relative; /* Required for tooltip positioning */
+  background-color: #4a6b4f; /* Green background for buttons */
+  color: #f9e7b8; /* Match the right panel text color */
+  font-size: 1.8rem; /* Increased font size for buttons */
+  font-weight: bold;
+  padding: 25px 30px; /* Increased padding for larger buttons */
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  width: 500px; /* Increased button width */
+}
+
+.subtopic-button:hover {
+  background-color: #3b5940; /* Darker green on hover */
+  transform: scale(1.08); /* Slightly enlarge the button on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+.subtopic-button span {
+  font-size: 2rem; /* Increased font size for the arrow */
+  font-weight: bold;
+}
+
+.subtopic-button::after {
+  content: attr(data-tooltip); /* Use the data-tooltip attribute for the tooltip text */
+  position: absolute;
+  top: -50px; /* Position above the button */
+  left: 50%; /* Center the tooltip horizontally */
+  transform: translateX(-50%);
+  background-color: #333; /* Dark background for the tooltip */
+  color: #fff; /* White text for contrast */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  white-space: nowrap; /* Prevent text wrapping */
+  opacity: 0; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the tooltip */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in effect */
+  transform: translateX(-50%) translateY(10px); /* Start slightly below */
+}
+
+.subtopic-button:hover::after {
+  opacity: 1; /* Show the tooltip on hover */
+  transform: translateX(-50%) translateY(0); /* Move into position */
+}
