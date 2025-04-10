@@ -42,7 +42,7 @@
               class="subtopic-button"
               data-tooltip="Scientists explore phenomena through observation, experimentation, and modeling.
               ."
-              onclick="location.href='SubTopic/ScientificInquiry/ScientificWorldview.html'"
+              onclick="location.href='SubTopic/ScientificInquiry/ScientificInquiry.html'"
             >
               Scientific Inquiry <span>&gt;</span>
             </button>
@@ -70,6 +70,86 @@
             </button>
           </div>
         </div>
+
+        <div class="published-articles">
+          <h2>Published Articles</h2>
+          <div class="articles-grid">
+            <a href="PublishedArticle/StudentsViewsonScience/StudentsViewsonScience.html" class="article-card">
+              <div class="article-image">
+                <img src="PicturesangVideos/ImagePlaceholder.png" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <h3>Students’ Views on Science</h3>
+              <p>A study on Filipino junior high school students' transitional views on NOS, highlighting gender and grade-level differences.</p>
+            </a>
+            <a href="PublishedArticle/COVID_19andScienceViews/COVID_19andScienceViews.html" class="article-card">
+              <div class="article-image">
+                <img src="PicturesangVideos/ImagePlaceholder.png" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <h3>COVID-19 and Science Views</h3>
+              <p>Research on how NOS understanding and beliefs influence pandemic preventive behaviors among Filipino undergraduates.</p>
+            </a>
+            <a href="PublishedArticle/FieldworkinHydrology/FieldworkinHydrology.html" class="article-card">
+              <div class="article-image">
+                <img src="PicturesangVideos/ImagePlaceholder.png" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <h3>Fieldwork in Hydrology</h3>
+              <p>An advocacy for fieldwork in hydrology to better understand water systems through system behaviors rather than models.</p>
+            </a>
+            <a href="PublishedArticle/CultureandTeaching/CultureandTeaching.html" class="article-card">
+              <div class="article-image">
+                <img src="PicturesangVideos/ImagePlaceholder.png" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <h3>Culture and Teaching</h3>
+              <p>Exploration of how cultural backgrounds influence teaching competencies and the integration of cultural literacy in science education.</p>
+            </a>
+            <a href="PublishedArticle/StorytellinginChemistry/StorytellinginChemistry.html" class="article-card">
+              <div class="article-image">
+                <img src="PicturesangVideos/ImagePlaceholder.png" alt="Article Image" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <h3>Storytelling in Chemistry</h3>
+              <p>Discussion on using storytelling and narratives to make complex chemistry concepts more accessible to students.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="recent-discoveries">
+          <h2>RECENT HAPPENINGS/ CURRENT DISCOVERIES</h2>
+          <div class="discoveries-grid">
+            <div class="discovery-item">
+              <div class="discovery-image">
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 1" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 2" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 3" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+              </div>
+              <div class="discovery-text">EXPLANATION</div>
+            </div>
+            <div class="discovery-item">
+              <div class="discovery-image">
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 1" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 2" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 3" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+              </div>
+              <div class="discovery-text">EXPLANATION</div>
+            </div>
+            <div class="discovery-item">
+              <div class="discovery-image">
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 1" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 2" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 3" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+              </div>
+              <div class="discovery-text">EXPLANATION</div>
+            </div>
+            <div class="discovery-item">
+              <div class="discovery-image">
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 1" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 2" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+                <img src="PicturesangVideos/ImagePlaceholder2.png" alt="Discovery Image 3" style="width: 100%; height: 100%; object-fit: cover;" onclick="showImageModal(this.src)" />
+              </div>
+              <div class="discovery-text">EXPLANATION</div>
+            </div>
+          </div>
+        </div>
+
         <div id="modal" class="modal">
           <div class="modal-content">
             <span class="close-button" onclick="closeModal()">&times;</span>
@@ -77,10 +157,23 @@
             <p id="modal-description"></p>
           </div>
         </div>
+
+        <!-- Image Modal -->
+        <div id="image-modal" class="modal" onclick="closeImageModal()">
+          <img id="modal-image" style="max-width: 90%; max-height: 90%;" />
+        </div>
+
+        <div class="bottom-section">
+          <h2>Importance</h2>
+          <p>
+            Understanding the Nature of Science (NOS) supports informed decision-making by enabling individuals to critically evaluate scientific information, leading to better personal and societal choices. It also fosters an appreciation of science by recognizing its processes and limitations, deepening respect for scientific endeavors and their contributions to society. Additionally, incorporating NOS into education enhances critical thinking, problem-solving skills, and comprehension of how scientific knowledge is constructed and validated.
+          </p>
+        </div>
       </div>
       <div class="image-container">
-        <img src="/PicturesangVideos/ImagePlaceholder.png" alt="Virus Image" />
+        <img src="PicturesangVideos/ImagePlaceholder.png" alt="Virus Image" />
       </div>
     </div>
+    <script src="MainMenuBottom.js"></script>
   </body>
 </html>

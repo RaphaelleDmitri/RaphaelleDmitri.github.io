@@ -6,7 +6,7 @@ body {
 
 .container {
   display: flex;
-  min-height: 100vh; /* Ensure the container takes up the full viewport height */
+  min-height: 100vh;
 }
 
 .left-panel {
@@ -28,26 +28,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* Reduce padding to make the yellow background smaller */
+  padding: 20px;
   background-color: #f9e7b8;
-  border-radius: 15px; /* Slightly reduce border radius */
-  max-width: 80%; /* Limit the width of the yellow background */
+  border-radius: 15px;
 }
 
 .right-panel {
   background-color: #4a6b4f;
   color: #f9e7b8;
   padding: 30px;
-  border: 5px solid #4a6b4f;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 930px;
-  height: 84%;
-  max-height: 900px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Add spacing between sections */
+  gap: 20px;
 }
 
 .right-panel header h1 {
@@ -55,15 +51,34 @@ body {
   margin-bottom: 15px;
 }
 
+.right-panel main section {
+  margin-bottom: 20px;
+}
+
+.right-panel main h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.right-panel main h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
 .right-panel main p {
   font-size: 1.4rem;
   line-height: 1.6;
 }
 
+.right-panel main ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
 .navigation-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: auto; /* Push the buttons to the bottom */
+  margin-top: auto;
 }
 
 .nav-button {
@@ -75,11 +90,11 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-button:hover {
-  background-color: #e0d3a8; /* Lighter yellow on hover */
-  transform: scale(1.08); /* Slightly enlarge the button on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+  background-color: #e0d3a8;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

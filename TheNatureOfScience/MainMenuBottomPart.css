@@ -250,3 +250,215 @@ body {
     transform: scale(1);
   }
 }
+
+.published-articles {
+  background-color: #f9e7b8; /* Match the right panel background */
+  padding: 5% 18%;
+  margin-top: 30px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.published-articles h2 {
+  font-size: 2.5rem;
+  color: #4a6b4f;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  justify-content: center; /* Center the grid items */
+}
+
+.article-card {
+  background-color: #4a6b4f;
+  color: #f9e7b8;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  height: 250px; /* Adjust height to fit image and text */
+  overflow: visible; /* Allow child elements like <p> to be visible */
+  position: relative; /* For positioning child elements */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+  z-index: 1; /* Ensure the card is above other content */
+  text-decoration: none; /* Remove link decoration */
+}
+
+.article-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  z-index: 10; /* Bring the card to the front */
+}
+
+.article-image {
+  background-color: #f9e7b8;
+  color: #4a6b4f;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 60%; /* Occupy the top 60% of the card */
+  width: 100%; /* Stretch to fill the card's width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.article-card:hover .article-image {
+  transform: scale(0.9); /* Shrink the image slightly on hover */
+}
+
+.article-card h3 {
+  font-size: 1.15rem;
+  margin: 10px 0; /* Add spacing below the article name */
+  position: relative; /* Ensure proper stacking */
+  z-index: 1; /* Keep the heading above other elements */
+  padding: 0px 10px;
+}
+
+.article-card p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0; /* Remove default margin for better alignment */
+  position: absolute; /* Position text absolutely within the card */
+  bottom: 10px; /* Position text at the bottom */
+  left: 10px; /* Add padding from the left */
+  right: 10px; /* Add padding from the right */
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(10px); /* Start slightly below */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth appearance */
+  color: #f9e7b8; /* Match the yellow background color */
+  background-color: rgb(74, 107, 79); /* Add a semi-transparent background for visibility */
+  z-index: 2; /* Ensure text is above other elements */
+}
+
+.article-card:hover p {
+  opacity: 1; /* Force visibility on hover */
+  transform: translateY(0); /* Move into position */
+  color: #fff8e8; /* Ensure the text remains the same color on hover */
+}
+
+.recent-discoveries {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f9e7b8; /* Match the right panel background */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.recent-discoveries h2 {
+  font-size: 2.5rem;
+  color: #4a6b4f;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.discoveries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fit 3 items per row */
+  gap: 20px;
+  align-items: center;
+}
+
+.discovery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4a6b4f; /* Green background for items */
+  padding: 0px 0px 0px 0px;
+  border: 8px #4a6b4f solid;
+  border-radius: 10px;
+  color: #f9e7b8; /* Match the text color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+}
+
+.discovery-item:hover {
+  transform: scale(1.05); /* Slightly enlarge the box on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+}
+
+.discovery-image {
+  display: flex; /* Arrange images */
+  flex-direction: column; /* Stack images vertically */
+  gap: 0; /* Remove spacing between images */
+  justify-content: flex-start; /* Align images to the top */
+  align-items: stretch; /* Stretch images to occupy full width */
+  width: 100%; /* Ensure the container takes full width */
+  height: 100%; /* Ensure the container takes full height */
+  overflow: hidden;
+}
+
+.discovery-image img {
+  width: 100%; /* Make each image take full width of the container */
+  height: 100%; /* Ensure images occupy full height */
+  object-fit: cover; /* Ensure images cover their allocated space */
+  border-radius: 0; /* Remove rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.discovery-image img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.discovery-text {
+  flex: 2;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+#image-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+  transform: scale(1); /* Default scale */
+}
+
+#image-modal img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+#image-modal:target img {
+  transform: scale(1.2); /* Scale up the image when displayed */
+}
+
+.bottom-section {
+  background-color: #f9e7b8; /* Match the right panel background */
+  padding: 20px 40px; /* Add padding for spacing */
+  font-family: Arial, sans-serif;
+  color: #4a6b4f; /* Match the text color of the right panel */
+  line-height: 1.6;
+  border-radius: 10px; /* Rounded corners for a clean look */
+  margin-top: 30px; /* Add spacing above the section */
+}
+
+.bottom-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.bottom-section p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
