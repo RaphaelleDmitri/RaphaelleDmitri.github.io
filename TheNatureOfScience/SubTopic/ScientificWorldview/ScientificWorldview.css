@@ -28,9 +28,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 30px 10px;
   background-color: #f9e7b8;
-  border-radius: 15px;
+  margin-left: 13px;
 }
 
 .right-panel {
@@ -90,11 +90,31 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-button:hover {
-  background-color: #e0d3a8; /* Lighter yellow on hover */
-  transform: scale(1.08); /* Slightly enlarge the button on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+  background-color: #e0d3a8;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption-template {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-caption-template img {
+  max-width: 50%; /* Make the image smaller */
+  height: auto;
+  border: 2px solid #4a6b4f;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
+.image-caption-template .caption {
+  font-size: 1rem;
+  color: #d6d6d6;
+  margin-top: 0px;
 }

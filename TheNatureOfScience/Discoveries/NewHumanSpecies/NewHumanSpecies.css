@@ -15,17 +15,17 @@ body {
   width: 100%; /* Make the image span the entire width */
   height: 30vh; /* Set the height to cover only the top part */
   object-fit: cover; /* Ensure the image covers the container */
-  margin: 0; /* Remove any default margins */
+  margin: 15px; /* Remove any default margins */
   padding: 0; /* Remove any default paddings */
 }
 
 .content-section {
   background-color: #4a6b4f; /* Green background */
   color: #f9e7b8; /* Light yellow text */
-  padding: 40px;
+  padding: 30px 50px;
   text-align: center;
   border-radius: 10px;
-  margin: 20px;
+  margin: 10px;
   width: 80%;
 }
 
@@ -57,4 +57,20 @@ body {
   background-color: #3b5940; /* Darker green on hover */
   color: #f9e7b8; /* Light yellow text on hover */
   transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+subtitle {
+  font-size: 1rem;
+  margin-top: -15px;
+}
+
+.subtitle a {
+  color: #e0d3a8; /* Softer yellow to match the color scheme */
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.subtitle a:hover {
+  color: #b5aa8c; /* Slightly darker yellow on hover */
 }

@@ -1,61 +1,76 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9e7b8; /* Light yellow background */
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .header-image img {
-    width: 100%; /* Make the image span the entire width */
-    height: 30vh; /* Set the height to cover only the top part */
-    object-fit: cover; /* Ensure the image covers the container */
-    margin: 0; /* Remove any default margins */
-    padding: 0; /* Remove any default paddings */
-  }
-  
-  .content-section {
-    background-color: #4a6b4f; /* Green background */
-    color: #f9e7b8; /* Light yellow text */
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
-    margin: 20px;
-    width: 80%;
-  }
-  
-  .content-section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .nav-button {
-    background-color: #f9e7b8; /* Light yellow background */
-    color: #4a6b4f; /* Green text */
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid #4a6b4f;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .nav-button:hover {
-    background-color: #3b5940; /* Darker green on hover */
-    color: #f9e7b8; /* Light yellow text on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9e7b8; /* Light yellow background */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-image img {
+  width: 100%; /* Make the image span the entire width */
+  height: 30vh; /* Set the height to cover only the top part */
+  object-fit: cover; /* Ensure the image covers the container */
+  margin: 15px; /* Remove any default margins */
+  padding: 0; /* Remove any default paddings */
+}
+
+.content-section {
+  background-color: #4a6b4f; /* Green background */
+  color: #f9e7b8; /* Light yellow text */
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px;
+  width: 80%;
+}
+
+.content-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-button {
+  background-color: #f9e7b8; /* Light yellow background */
+  color: #4a6b4f; /* Green text */
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #4a6b4f;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #3b5940; /* Darker green on hover */
+  color: #f9e7b8; /* Light yellow text on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+subtitle {
+  font-size: 1rem;
+  margin-top: -15px;
+}
+
+.subtitle a {
+  color: #e0d3a8; /* Softer yellow to match the color scheme */
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.subtitle a:hover {
+  color: #b5aa8c; /* Slightly darker yellow on hover */
+}

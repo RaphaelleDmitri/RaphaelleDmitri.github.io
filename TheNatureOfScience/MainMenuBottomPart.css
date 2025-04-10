@@ -377,6 +377,7 @@ body {
   color: #f9e7b8; /* Match the text color */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
   height: auto; /* Adjust height dynamically */
+  max-height: 185px;
   text-decoration: none; /* Remove underline for links */
 }
 
