@@ -360,44 +360,43 @@ body {
 
 .discoveries-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Fit 3 items per row */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   align-items: center;
 }
 
 .discovery-item {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Arrange content horizontally */
+  flex-direction: row; /* Stack images to the left of the text */
+  justify-content: flex-start;
   align-items: center;
   background-color: #4a6b4f; /* Green background for items */
-  padding: 0px 0px 0px 0px;
+  padding: 0px; /* Add padding for spacing */
   border: 8px #4a6b4f solid;
   border-radius: 10px;
   color: #f9e7b8; /* Match the text color */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+  height: auto; /* Adjust height dynamically */
+  text-decoration: none; /* Remove underline for links */
 }
 
 .discovery-item:hover {
-  transform: scale(1.05); /* Slightly enlarge the box on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 .discovery-image {
-  display: flex; /* Arrange images */
-  flex-direction: column; /* Stack images vertically */
-  gap: 0; /* Remove spacing between images */
-  justify-content: flex-start; /* Align images to the top */
-  align-items: stretch; /* Stretch images to occupy full width */
-  width: 100%; /* Ensure the container takes full width */
-  height: 100%; /* Ensure the container takes full height */
+  width: 30%; /* Reduce the image container width */
+  height: 100%; /* Ensure the image container takes full height */
   overflow: hidden;
+  border-radius: 10px; /* Add rounded corners */
+  margin-right: 20px; /* Add spacing between the image and text */
 }
 
 .discovery-image img {
-  width: 100%; /* Make each image take full width of the container */
-  height: 100%; /* Ensure images occupy full height */
-  object-fit: cover; /* Ensure images cover their allocated space */
-  border-radius: 0; /* Remove rounded corners */
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Ensure the image occupies full height */
+  object-fit: cover; /* Ensure the image covers its allocated space */
   transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
@@ -406,11 +405,9 @@ body {
 }
 
 .discovery-text {
-  flex: 2;
-  text-align: center;
-  font-size: 1.5rem;
+  text-align: left; /* Align text to the left */
+  font-size: 1.5rem; /* Adjust font size for better fit */
   font-weight: bold;
-  padding-left: 10px;
 }
 
 #image-modal {

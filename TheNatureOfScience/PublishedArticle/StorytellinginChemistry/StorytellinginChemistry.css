@@ -7,7 +7,7 @@ body {
 .article-container {
     background-color: #4f704d; /* Green background */
     color: #fdf5d4; /* Light yellow text */
-    margin: 20px;
+    margin: 30px 80px; /* Increased margin by 50px */
     padding: 40px;
     border-radius: 15px;
     text-align: center; /* Ensure buttons align properly */
@@ -19,46 +19,7 @@ body {
     justify-content: center;
     gap: 20px; /* Add spacing between buttons */
     margin-top: 20px; /* Add spacing above buttons */
-    margin: 20px;body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #fdf5d4; /* Light yellow background */
-    }
-    
-    .article-container {
-        background-color: #4f704d; /* Green background */
-        color: #fdf5d4; /* Light yellow text */
-        margin: 20px;
-        padding: 40px;
-        border-radius: 15px;
-        text-align: center; /* Ensure buttons align properly */
-        margin-bottom: 40px; /* Add spacing below the article */
-    }
-    
-    .button-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px; /* Add spacing between buttons */
-        margin-top: 20px; /* Add spacing above buttons */
-        margin: 20px;
-    }
-    
-    .button-container a {
-        text-decoration: none;
-        padding: 10px 20px;
-        border: 2px solid #4f704d;
-        border-radius: 10px;
-        color: #4f704d;
-        background-color: #fdf5d4;
-        font-weight: bold;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    
-    .button-container a:hover {
-        background-color: #4f704d;
-        color: #fdf5d4;
-    }
-    
+    margin: 20px;
 }
 
 .button-container a {
